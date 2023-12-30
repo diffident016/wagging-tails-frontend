@@ -1,11 +1,13 @@
 let globalData = [];
-let url = "https://vetspot.onrender.com";
+let url = "https://wagging-tails.onrender.com";
 let card_section = document.querySelector("#card-section");
 
 function getWorkers() {
-  fetch(`${url}/doctor/getAllDoc`,{ headers: {
-    Authorization: localStorage.getItem("token")
-}})
+  fetch(`${url}/doctor/getAllDoc`, {
+    headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
     .then((res) => res.json())
     .then((data) => {
       globalData = data.data;
@@ -72,16 +74,16 @@ function totalEmployee(data) {
   totalEmployee.innerHTML = `<span>${data}</span> Employee`;
 }
 
-function handleFilterClick(event){
-    let  buttonText = event.target.innerHTML;
-    let filtereddata = globalData.filter((item)=>{
-      return item.specialization.toLowerCase() == buttonText.toLowerCase()
-    })
-    console.log(typeof buttonText)
-    // console.log(filtereddata);
-    displayCard(filtereddata);
-  }
-  
+function handleFilterClick(event) {
+  let buttonText = event.target.innerHTML;
+  let filtereddata = globalData.filter((item) => {
+    return item.specialization.toLowerCase() == buttonText.toLowerCase()
+  })
+  console.log(typeof buttonText)
+  // console.log(filtereddata);
+  displayCard(filtereddata);
+}
+
 
 // let sort = document.getElementById("price");
 // sort.addEventListener("change", () => {

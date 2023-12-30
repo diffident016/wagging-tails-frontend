@@ -8,11 +8,7 @@ document.getElementById("login-toggle").addEventListener("click", function () {
     document.getElementById("login-form").classList.add("active");
 });
 
-// import { useState } from "react";
-// import ReCAPTCHA from "react-google-recaptcha";
-
-// let url = "https://vetspot.onrender.com"
-let url = "http://localhost:27107"
+let url = "https://wagging-tails.onrender.com"
 
 const loginForm = document.getElementById("login-form");
 

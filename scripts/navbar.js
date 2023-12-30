@@ -10,7 +10,7 @@ let navRedirect = document.getElementById("navredirect");
 let viewApp = document.getElementById("viewApp");
 let adminbtn = document.getElementById("adminbtn");
 let videoCall = document.getElementById("videoCall");
-let url = "https://vetspot.onrender.com";
+let url = "https://wagging-tails.onrender.com";
 
 // Home redirect
 logo.addEventListener("click", () => {

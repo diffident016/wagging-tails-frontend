@@ -1,5 +1,5 @@
 const myform = document.getElementById("form");
-let url = "https://vetspot.onrender.com";
+let url = "https://wagging-tails.onrender.com";
 myform.addEventListener("submit", (event) => {
     event.preventDefault();
 

@@ -1,6 +1,6 @@
 let profId = localStorage.getItem("profId");
 // console.log(profId);
-let url ="https://vetspot.onrender.com"
+let url = "https://wagging-tails.onrender.com"
 // pop up javascript
 
 const confirmBtn = document.getElementById("btn-65");
@@ -55,9 +55,11 @@ console.log(arr);
 
 //
 function getData() {
-  fetch(`${url}/gettime/${profId}`,{ headers: {
-    Authorization: localStorage.getItem("token")
-}})
+  fetch(`${url}/gettime/${profId}`, {
+    headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
     .then((res) => res.json())
     .then((data) => {
       displayData(data);
@@ -168,9 +170,11 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
 // getting the particular persons data
 
 function getWorkerInfo() {
-  fetch(`${url}/getparticulardoc/${profId}`,{ headers: {
-    Authorization: localStorage.getItem("token")
-}})
+  fetch(`${url}/getparticulardoc/${profId}`, {
+    headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
     .then((res) => res.json())
     .then((data) => {
       setData(data);
